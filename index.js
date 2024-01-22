@@ -4,7 +4,7 @@ const {generateFile} =require('./generateFile')
 const {executeCpp}=require("./executeCpp")
 const {executePy}=require("./executePy")
 const cors=require("cors")
-
+const PORT=process.env.PORT || 5000
 app.use(cors())
 app.get('/',(req,res)=>{
     return res.json({hello:"World"})
