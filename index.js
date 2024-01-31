@@ -4,7 +4,7 @@ const {generateFile} =require('./generateFile')
 const {executeCpp}=require("./executeCpp")
 const {executePy}=require("./executePy")
 const cors=require("cors")
-const PORT=process.env.PORT || 5000
+const PORT= 5000 || process.env.PORT
 app.use(cors())
 app.get('/',(req,res)=>{
     return res.json({hello:"World"})
@@ -30,5 +30,5 @@ app.post("/run",async(req,res)=>{
 })
 
 app.listen(PORT,()=>{
-    console.log("Listening on 5000")
+    console.log(`Listening on ${PORT}`)
 })
